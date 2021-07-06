@@ -1,7 +1,7 @@
 const router = new VueRouter({
     mode: "history",
     routes: [
-        {path: "/", component: httpVueLoader("./index.vue")}
+        {path: "/", component: httpVueLoader("src/pages/index.vue")}
     ]
 })
 
