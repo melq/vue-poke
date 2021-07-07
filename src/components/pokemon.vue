@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>Hello, pokemons!</h1>
+    <h1>Pokemons!</h1>
     <li v-for = "pokemon in pokemons">
       <h2>{{ pokemon.species.name }}</h2>
-      <img v-bind:src="pokemon.sprites.front_default" />
+<!--      <img src="{{ pokemon.}}">-->
     </li>
   </div>
 </template>
