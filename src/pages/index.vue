@@ -23,11 +23,15 @@ module.exports = {
       const array = [];
       for (let i = 1; i < 10; i++) {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-            .then(function(response) {
+            .then(function (response) {
               array.push(response.data)
               console.log(response.data)
             })
       }
+      array.sort(function(a, b) {
+        if (a.id < b.id) return 1
+        else return -1
+      })
       this.pokemons = array
     }
   },
