@@ -3,7 +3,9 @@
     <h1>Hello, pokemons!</h1>
     <li v-for = "pokemon in pokemons">
       <h2>{{ pokemon.species.name }}</h2>
-      <img v-bind:src="pokemon.sprites.front_default" />
+      <img v-bind:src = "pokemon.sprites.front_default" />
+<!--      <pokemon-view pokemon = pokemon />-->
+      <pokemon-view :name = "pokemon.species.name" :imgUrl = "pokemon.sprites.front_default" />
     </li>
   </div>
 </template>
@@ -11,7 +13,7 @@
 <script>
 module.exports = {
   components: {
-
+    pokemonView: httpVueLoader("../components/pokemon.vue")
   },
   data: function() {
     return {
